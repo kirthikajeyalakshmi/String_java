@@ -1,0 +1,50 @@
+import java.util.*;
+
+public class string{
+public static void main(String[] args){
+    Scanner in = new Scanner(System.in);
+
+    StringBuilder sb = new StringBuilder("Kirthika");
+
+    sb.append("R");
+    System.out.println(sb);
+    sb.insert(2,"hi");    
+    System.out.println(sb);
+    sb.delete(2,5);    
+    System.out.println(sb);
+    sb.replace(0,3,"hi");    
+    System.out.println(sb);
+    sb.setCharAt(0,'M');    
+    System.out.println(sb);
+    sb.reverse();
+    System.out.println(sb);
+
+    String result = sb.toString();
+    System.out.println(result);   //stringbuilder looks like string,but its a obj type
+    //so by doing this sb.toString(); we can use all string methods on this result
+
+    //string to int
+    String s="123";
+    int num=Integer.parseInt(s);
+    System.out.println(num);
+
+    //string to long long
+    String sa="9876432012";
+    Long num1=Long.parseLong(sa);
+    System.out.println(num);
+
+    //gives +ve val 
+    int x=-9;
+    System.out.println(Math.abs(x));
+
+    char c='k';
+    if(Character.isLetter(c)){
+        System.out.println("yes its a letter");
+    }
+
+    char ch='2';
+    if(Character.isLetterOrDigit(ch)){
+        System.out.println("yes its a digit");
+    }
+}
+}
