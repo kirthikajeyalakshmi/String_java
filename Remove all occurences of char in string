@@ -1,0 +1,21 @@
+import java.util.*;
+
+public class string{
+public static void main(String[] args){
+    Scanner in = new Scanner(System.in);
+
+    String str=in.nextLine();
+    StringBuffer sb=new StringBuffer(str);
+    char c=in.next().charAt(0);
+    
+    int i=0;
+    while(i<sb.length()){
+        if(sb.charAt(i)==c){
+            sb.deleteCharAt(i);
+        }else{
+            i++;
+        }
+    }
+    System.out.print(sb.toString());
+}
+}
