@@ -1,0 +1,19 @@
+import java.util.*;
+
+public class string{
+public static void main(String[] args){
+    Scanner in = new Scanner(System.in);
+
+    //with stringbuilder
+    String s=in.nextLine();
+    StringBuilder sb=new StringBuilder(s);
+    String val=in.nextLine();    
+    int pos=in.nextInt();
+    sb.insert(pos,val);
+    System.out.print(sb.toString());
+
+    //without stringbuilder
+    s=s.substring(0,pos) + val + s.substring(pos);
+    System.out.print(s);
+}
+}
