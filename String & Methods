@@ -1,0 +1,29 @@
+import java.util.*;
+
+public class string{
+public static void main(String[] args){
+    Scanner in = new Scanner(System.in);
+
+    // String name=in.nextLine();
+    // System.out.print(name.charAt(0) + " " + name.charAt(name.length()-1));
+    // System.out.print(name.length());
+
+    // for(int i=0;i<name.length();i++){
+    //     System.out.print(name.charAt(i));
+    // }
+
+    //methods
+    String s="Hellojava";
+    System.out.print(s.length());
+    System.out.print(s.toLowerCase());
+    System.out.println(s.toUpperCase());
+    System.out.println(s.substring(0,5));
+    System.out.println(s.indexOf('j'));
+    System.out.println(s.equals("Hellojava"));
+    System.out.println("Equals IgnoreCase helloJava: " + s.equalsIgnoreCase("helloJava"));
+    System.out.print(s.startsWith("hello"));
+    System.out.print(s.endsWith("java"));
+    System.out.print(s.contains("loj"));
+
+}
+}
