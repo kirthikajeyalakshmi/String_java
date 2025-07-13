@@ -25,3 +25,32 @@ class Main {
         System.out.print(result.toString());
     }
 }
+Or
+
+// User function Template for Java
+
+class Solution {
+    public String convert(String str) {
+        // code here
+        StringBuilder result=new StringBuilder(str);
+        
+        for(int i=0;i<str.length();i++){
+            char ch = str.charAt(i);
+            if(i==0 || str.charAt(i-1)==' '){
+                if(ch>='a' && ch<='z'){
+                result.append(ch.toUpperCase());
+                }else{
+                result.append(ch);
+            }
+            }
+            else{
+                if(ch>='A' && ch<='Z'){
+                    result.append(ch.toLowerCase());
+                }else{
+                    result.append(ch);
+                }
+            }
+        }
+        return result.toString();
+    }
+}
