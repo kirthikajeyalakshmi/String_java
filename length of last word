@@ -1,0 +1,17 @@
+// User function Template for Java
+class Solution {
+    int findLength(String s) {
+        // code here
+        int n=s.length();
+        int i=n-1;
+        int len=0;
+        while(i>=0 && s.charAt(i)==' '){
+            i--;
+        }
+        while(i>=0 && s.charAt(i)!=' '){
+            len++;
+            i--;
+        }
+        return len;
+    }
+}
