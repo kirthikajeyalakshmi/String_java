@@ -1,0 +1,17 @@
+import java.util.*;
+
+class Main {
+    
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String s=in.nextLine();
+        
+        int sum=0;
+        for(char ch:s.toCharArray()){
+            if(Character.isDigit(ch)){
+                sum+=ch-'0';
+            }
+        }
+        System.out.print(sum);
+    }
+}
