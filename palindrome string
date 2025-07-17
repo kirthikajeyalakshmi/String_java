@@ -1,0 +1,24 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String str=in.nextLine();
+        HashMap<Character,Integer>mp=new HashMap<>();
+        //put chars
+        for(char ch:str.toCharArray()){
+            mp.put(ch,mp.getOrDefault(ch,0)+1);
+        }
+        int oddcount=0;
+        for(Integer freq:mp.values()){
+            if(freq%2!=0){
+                oddcount++;
+            }
+        }
+        if(oddcount<=1){
+            System.out.print("palindrome");
+        }else{
+            System.out.print("not");
+        }
+    }
+}
