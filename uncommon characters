@@ -1,0 +1,32 @@
+// User function Template for Java
+
+class Solution {
+    String uncommonChars(String s1, String s2) {
+        // code here
+        HashSet<Character>st1=new HashSet<>();
+        HashSet<Character>st2=new HashSet<>();
+        TreeSet<Character>result=new TreeSet<>();
+        
+        for(char ch:s1.toCharArray()){
+            st1.add(ch);
+        }
+        for(char ch:s2.toCharArray()){
+            st2.add(ch);
+        }
+        for(char ch:st1){
+            if(!st2.contains(ch)){
+                result.add(ch);
+            }
+        }
+        for(char ch:st2){
+            if(!st1.contains(ch)){
+                result.add(ch);
+            }
+        }
+        StringBuilder sb=new StringBuilder();
+        for(char ch:result){
+            sb.append(ch);
+        }
+        return sb.toString();
+    }
+}
