@@ -1,15 +1,19 @@
-// User function Template for Java
-class Solution {
-    char firstRep(String S) {
-        // your code here
-        for(int i=0;i<S.length();i++){
-            char ch=S.charAt(i);
-            for(int j=i+1;j<S.length();j++){
-                if(ch==S.charAt(j)){
-                    return ch;
-                }
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String s=in.nextLine();
+        char target=in.next().charAt(0);
+        boolean found=false;
+        for(int i=0;i<s.length();i++){
+            if(s.charAt(i)==target){
+                System.out.print("found");
+                found=true;
+                break;
             }
         }
-        return '#';
+        if(!found){
+            System.out.print("not found");
+        }
     }
 }
