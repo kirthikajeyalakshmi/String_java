@@ -1,0 +1,13 @@
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String s=in.nextLine();
+        char first=s.charAt(0);
+        if(Character.isLowerCase(first)){
+            System.out.print(s.toLowerCase());
+        }else if(Character.isUpperCase(first)){
+            System.out.print(s.toUpperCase());
+        }
+    }
+}
