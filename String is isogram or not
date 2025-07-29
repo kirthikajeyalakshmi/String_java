@@ -17,3 +17,26 @@ class Main {
 
     }
 }
+
+OR----------
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        HashMap<Character,Integer>mp=new HashMap<>();
+        Scanner in = new Scanner(System.in);
+        String s=in.nextLine();
+        for(char ch:s.toCharArray()){
+            mp.put(ch,mp.getOrDefault(ch,0)+1);
+        }
+        for(int i=0;i<s.length();i++){
+            char ch=s.charAt(i);
+            if(mp.get(ch)>1){
+                System.out.print("false");
+                return;
+            }
+        }
+        System.out.print("true");
+    }
+}
