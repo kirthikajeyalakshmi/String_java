@@ -12,3 +12,25 @@ class Solution {
         return "YES";
     }
 }
+
+OR-------------
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String s = in.nextLine();
+        boolean isgood=true;
+        for(int i=0;i<s.length()-1;i++){
+            if(Math.abs(s.charAt(i)-s.charAt(i+1))!=1 && Math.abs(s.charAt(i)-s.charAt(i+1))!=25){
+                isgood=false;
+                break;
+        }
+        }
+        if(isgood){
+            System.out.print("good");
+        }else{
+            System.out.print("bad");
+        }
+    }
+}
