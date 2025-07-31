@@ -1,0 +1,33 @@
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String s1 = in.nextLine();
+        String s2 = in.nextLine();
+        HashSet<Character>st1=new HashSet<>();
+        HashSet<Character>st2=new HashSet<>();
+        TreeSet<Character>res=new TreeSet<>();
+        StringBuilder sb = new StringBuilder();
+        for(char ch:s1.toCharArray()){
+            st1.add(ch);
+        }
+        for(char ch:s2.toCharArray()){
+            st2.add(ch);
+        }
+        for(char ch:st1){
+            if(!st2.contains(ch)){
+                res.add(ch);
+            }
+        }
+        for(char ch:st2){
+            if(!st1.contains(ch)){
+                res.add(ch);
+            }
+        }
+        for(char ch:res){
+            sb.append(ch);
+        }
+            System.out.print(sb.toString());
+
+    }
+}
