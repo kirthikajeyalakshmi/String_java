@@ -28,3 +28,27 @@ class Main {
         }
     }
 }
+
+OR------------
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String s1=in.nextLine();
+        String s2=in.nextLine();
+        if(s1.length()!=s2.length()){
+            System.out.print("false");
+            return ;
+        }
+        char arr1[] = s1.toCharArray();
+        char arr2[] = s2.toCharArray();
+        Arrays.sort(arr1);
+        Arrays.sort(arr2);
+        if(Arrays.equals(arr1,arr2)){
+            System.out.print("true");
+        }else{
+            System.out.print("false");
+        }
+    }
+}
