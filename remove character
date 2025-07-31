@@ -1,0 +1,19 @@
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String s1 = in.nextLine();
+        String s2 = in.nextLine();
+        HashSet<Character>st=new HashSet<>();
+        StringBuilder sb = new StringBuilder();
+        for(char ch:s2.toCharArray()){
+            st.add(ch);
+        }
+        for(char ch:s1.toCharArray()){
+            if(!st.contains(ch)){
+                sb.append(ch);
+            }
+        }
+        System.out.print(sb);
+    }
+}
