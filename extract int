@@ -1,0 +1,25 @@
+
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String s =in.nextLine();
+        ArrayList<String>res=new ArrayList<>();
+        String temp=" ";
+        for(char ch:s.toCharArray()){
+            if(Character.isDigit(ch)){
+                temp+=ch;
+            }else{
+                if(!temp.equals(" ")){
+                    res.add(temp);
+                    temp=" ";
+                }
+            }
+        }
+        if(!temp.equals(" ")){
+            res.add(temp);
+        }
+        System.out.print(res);
+    }
+}
