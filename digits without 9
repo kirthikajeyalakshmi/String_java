@@ -1,0 +1,32 @@
+// User function Template for Java
+
+class Solution {
+    long ExtractNumber(String s) {
+        // code here
+        String temp="";
+        long max=-1;
+        for(char ch:s.toCharArray()){
+            if(Character.isDigit(ch)){
+                temp+=ch;
+            }else{
+                if(!temp.isEmpty()){
+                    if(!temp.contains("9")){
+                        long num=Long.parseLong(temp);
+                        if(num>max){
+                            max=num;
+                        }
+                    }
+                    temp="";
+                }
+            }
+        }
+        if(!temp.isEmpty() && !temp.contains("9")){
+            long num=Long.parseLong(temp);
+                        if(num>max){
+                            max=num;
+                        }
+        }
+        return max;
+        
+    }
+}
