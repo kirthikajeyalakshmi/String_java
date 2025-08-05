@@ -1,0 +1,10 @@
+class Solution {
+    public boolean areRotations(String s1, String s2) {
+        // code here
+        if(s1.length()!=s2.length()){
+            return false;
+        }
+        String ans=s1+s1;
+        return ans.contains(s2);
+    }
+}
