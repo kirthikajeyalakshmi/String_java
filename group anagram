@@ -1,0 +1,24 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int n=in.nextInt();
+        String[] s=new String[n];
+        for(int i=0;i<n;i++){
+            s[i]=in.next();
+        }
+        Map<String,List<String>>mp=new HashMap<>();
+        ArrayList<String>list=new ArrayList<>();
+        for(String word:s){
+            char[] ch=word.toCharArray();
+            Arrays.sort(ch);
+            String sortedword=new String(ch);
+            mp.putIfAbsent(sortedword,new ArrayList<>());
+            mp.get(sortedword).add(word);
+        }
+        System.out.print(new ArrayList<>(mp.values()));
+
+    }
+}
