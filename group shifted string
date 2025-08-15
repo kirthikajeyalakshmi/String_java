@@ -1,0 +1,19 @@
+
+class Solution {
+    public ArrayList<ArrayList<String>> groupShiftedString(String[] arr) {
+        // code here
+        HashMap<String,ArrayList<String>>mp=new HashMap<>();
+        for(String str:arr){
+            StringBuilder pattern = new StringBuilder();
+            
+            for(int i=1;i<str.length();i++){
+                int diff= (str.charAt(i) - str.charAt(i-1)+26) %26;
+                pattern.append(diff).append(",");
+            }
+            String key =pattern.toString();
+            mp.putIfAbsent(key,new ArrayList<>());
+            mp.get(key).add(str);
+        }
+        return new ArrayList<>(mp.values());
+    }
+}
