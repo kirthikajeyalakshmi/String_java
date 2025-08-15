@@ -1,0 +1,22 @@
+import java.util.*;
+class Main {
+    public static boolean fn(String s) {
+        HashSet<Character>st=new HashSet<>();
+        for(char ch:s.toCharArray()){
+            if(st.contains(ch)){
+                return false;
+            }
+            st.add(ch);
+        }
+        return true;
+    }
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        String s=in.nextLine();
+        if(fn(s)){
+            System.out.print("unique");
+        }else{
+            System.out.print("not");
+            }
+    }
+}
