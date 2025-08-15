@@ -1,0 +1,26 @@
+class Solution {
+    public String frequencySort(String s) {
+        Map<Character,Integer>mp=new HashMap<>();
+        for(char ch:s.toCharArray()){
+            mp.put(ch,mp.getOrDefault(ch,0)+1);
+        }
+        String ans="";
+        while(!mp.isEmpty()){
+            char maxkey=0;
+            int maxvalue=Integer.MIN_VALUE;
+
+            for(Map.Entry<Character,Integer>it:mp.entrySet()){
+                if(it.getValue()>maxvalue){
+                    maxvalue=it.getValue();
+                    maxkey=it.getKey();
+                }
+            }
+            for(int i=0;i<maxvalue;i++){
+            ans+=maxkey;
+        }
+        mp.remove(maxkey);
+        }
+        
+        return ans;
+    }
+}
