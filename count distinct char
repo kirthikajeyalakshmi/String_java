@@ -1,0 +1,13 @@
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String s=in.nextLine();
+        HashSet<Character>st=new HashSet<>();
+        for(char ch:s.toCharArray()){
+                st.add(ch);
+            }
+        System.out.print(st.size());
+    }
+    }
