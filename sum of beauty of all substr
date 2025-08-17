@@ -1,0 +1,34 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner in =new Scanner(System.in);
+        String s=in.nextLine();
+        int n=s.length();
+        int sum=0;
+        
+        for(int i=0;i<n;i++){
+            for(int j=i;j<n;j++){
+                String sub=s.substring(i,j+1);
+                HashMap<Character,Integer>mp=new HashMap<>();
+                for(char ch:sub.toCharArray()){
+                mp.put(ch,mp.getOrDefault(ch,0)+1);
+                }
+                
+                int minfreq = Integer.MAX_VALUE;
+                int maxfreq = Integer.MIN_VALUE;
+                
+                for(int freq:mp.values()){
+                    minfreq=Math.min(minfreq,freq);
+                    maxfreq=Math.max(maxfreq,freq);
+                }
+                 sum=sum+ (maxfreq-minfreq);
+
+            }
+        }
+        System.out.print(sum);
+        
+    }
+}
