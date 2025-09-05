@@ -19,3 +19,30 @@ class Main {
        System.out.print(count);
     }
 }
+------------------------------------------------------(GFG)
+
+// User function Template for Java
+
+class Sol {
+    int getCount(String s, int n) {
+        // your code here
+        HashMap<Character,Integer>mp=new HashMap<>();
+        char prev=s.charAt(0);
+        mp.put(prev,1);
+        
+        for(int i=1;i<s.length();i++){
+            char curr=s.charAt(i);
+            if(curr!=prev){
+                mp.put(curr,mp.getOrDefault(curr,0)+1);
+            }
+            prev=curr;
+        }
+        int cnt=0;
+        for(int freq:mp.values()){
+            if(freq==n){
+                cnt++;
+            }
+        }
+        return cnt;
+    }
+}
