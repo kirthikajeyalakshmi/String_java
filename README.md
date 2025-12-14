@@ -33,7 +33,6 @@ All files are kept in a **single flat structure** to allow quick access and easy
 * Be well-prepared for **technical interviews**
 
 ---
-Consistency > Perfection. Keep practicing. Keep improving. 💻
 
 Consistency > Perfection.
 Keep practicing. Keep improving. 💻
